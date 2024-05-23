@@ -5,9 +5,10 @@ import ChildB from "./ChildB";
 function Parent() {
   const [number, setNumber] = useState(0);
   return (
-    <div>
+    <div style={{ border: "2px solid blue", padding: "10px", margin: "10px" }}>
+      <h3 style={{ color: "blue" }}>Parent</h3>
       <button onClick={() => setNumber((number) => number + 1)}>+</button>
-      <ChildA number={number} />
+      <ChildA number={number} setNumber={setNumber} />
       <ChildB number={number} />
     </div>
   );
