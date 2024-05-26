@@ -1,11 +1,12 @@
+import StyledDiv from "./StyledDiv";
 
 function ChildA({ number, setNumber }) {
   return (
-    <div style={{ border: "2px solid blue", padding: "10px", margin: "10px" }}>
+    <StyledDiv>
       <h3>Child A</h3>
       <p>{number}</p>
       <button onClick={() => setNumber((number) => number + 25)}>MEOW</button>
-    </div>
+    </StyledDiv>
   );
 }
 
